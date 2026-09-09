@@ -9,17 +9,17 @@
             { "label": "Toggle Panel", "command": "atom-ai:toggle" },
             { "label": "Send Selection", "command": "atom-ai:send-selection" },
             { "label": "Apply Diff From Output", "command": "atom-ai:apply-diff" },
-            { "label": "Clear Context", "command": "atom-ai:clear-context" }
+            { "label": "Clear Context", "command": "atom-ai:clear-context" },
+            { "type": "separator" },
+            { "label": "Report Issue", "command": "atom-ai:report-issue" }
           ]
         }
       ]
     }
   ],
-  "context-menu": [
-    {
-      "atom-text-editor": [
-        { "label": "Atom AI: Ask about selection", "command": "atom-ai:send-selection" }
-      ]
-    }
-  ]
+  "context-menu": {
+    "atom-text-editor": [
+      { "label": "Atom AI: Ask about selection", "command": "atom-ai:send-selection" }
+    ]
+  }
 }
