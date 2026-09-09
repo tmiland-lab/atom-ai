@@ -1,7 +1,7 @@
 {
   "name": "atom-ai",
   "main": "./lib/main",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "CLI agent bridge for Atom: run opencode, aider or claude-code with editor context",
   "keywords": [
     "ai",
