@@ -1,0 +1,51 @@
+{
+  "name": "atom-ai",
+  "main": "./lib/main",
+  "version": "0.1.0",
+  "description": "CLI agent bridge for Atom: run opencode, aider or claude-code with editor context",
+  "keywords": [
+    "ai",
+    "agent",
+    "opencode",
+    "aider",
+    "assistant",
+    "cli"
+  ],
+  "repository": "https://github.com/tmiland-lab/atom-ai",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "activationCommands": {
+    "atom-workspace": [
+      "atom-ai:toggle",
+      "atom-ai:send-selection"
+    ]
+  },
+  "configSchema": {
+    "agent": {
+      "type": "string",
+      "default": "opencode",
+      "enum": [
+        "opencode",
+        "aider",
+        "claude",
+        "custom"
+      ],
+      "title": "CLI agent",
+      "description": "Which command-line agent to run"
+    },
+    "customCommand": {
+      "type": "string",
+      "default": "",
+      "title": "Custom command",
+      "description": "Used when agent is 'custom', e.g. 'myagent --flag'. The prompt is appended as the last argument."
+    },
+    "extraPath": {
+      "type": "string",
+      "default": "",
+      "title": "Extra PATH",
+      "description": "Directories (colon-separated) prepended to PATH, for agents installed outside the desktop launch environment."
+    }
+  }
+}

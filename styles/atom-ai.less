@@ -1,0 +1,56 @@
+@import "ui-variables";
+
+.atom-ai {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 0;
+
+  .atom-ai-context-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: @component-padding;
+    padding: @component-padding / 2 @component-padding;
+    border-bottom: 1px solid @base-border-color;
+    font-size: @font-size-small;
+    color: @text-color-subtle;
+
+    .atom-ai-context-label {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+
+  .atom-ai-output {
+    flex: 1;
+    min-height: 0;
+    overflow: auto;
+    margin: 0;
+    padding: @component-padding;
+    font-family: var(--editor-font-family, monospace);
+    font-size: @font-size-small;
+    white-space: pre-wrap;
+    word-break: break-word;
+    user-select: text;
+    cursor: text;
+
+    .atom-ai-diff-add { color: @text-color-success; }
+    .atom-ai-diff-del { color: @text-color-error; }
+    .atom-ai-diff-hunk { color: @text-color-info; }
+  }
+
+  .atom-ai-input-row {
+    display: flex;
+    align-items: flex-end;
+    gap: @component-padding / 2;
+    padding: @component-padding / 2 @component-padding;
+    border-top: 1px solid @base-border-color;
+
+    .atom-ai-prompt {
+      flex: 1;
+      min-height: 2em;
+    }
+  }
+}

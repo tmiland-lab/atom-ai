@@ -1,0 +1,6 @@
+{
+  "atom-workspace": {
+    "ctrl-alt-a": "atom-ai:toggle",
+    "ctrl-alt-s": "atom-ai:send-selection"
+  }
+}

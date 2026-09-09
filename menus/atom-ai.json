@@ -1,0 +1,25 @@
+{
+  "menu": [
+    {
+      "label": "Packages",
+      "submenu": [
+        {
+          "label": "Atom AI",
+          "submenu": [
+            { "label": "Toggle Panel", "command": "atom-ai:toggle" },
+            { "label": "Send Selection", "command": "atom-ai:send-selection" },
+            { "label": "Apply Diff From Output", "command": "atom-ai:apply-diff" },
+            { "label": "Clear Context", "command": "atom-ai:clear-context" }
+          ]
+        }
+      ]
+    }
+  ],
+  "context-menu": [
+    {
+      "atom-text-editor": [
+        { "label": "Atom AI: Ask about selection", "command": "atom-ai:send-selection" }
+      ]
+    }
+  ]
+}
